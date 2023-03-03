@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+</head>
+<body>
+<!-- 2) Faça uma função que receba um único valor representando 
+segundos. Essa funçãodeverá convertê-lo para hora, minutos e 
+segundos. Todas as variáveis devem ser passadas como parâmetro, 
+não havendo variáveis globais. -->
+    <script>
+//A VARIAVEL NÃO É GLOBAL ENTÃO ELA FOI CHAMADA NA FUNÇÃO
+
+        function calculo(r){ //CHAMEI A GATA
+          
+        r = parseFloat(prompt("Digite um valor em segundos:"))
+         // O CALCULO BEM TRANS DA TRANSFORMAÇÃO DE MINUTO/HORA EM SEGUNDOS
+        var minuto = r/60
+         var hora = r /3600
+         
+         //AQUI EU CONCATENEI AS INFORMAÇÕES
+         console.log(`O numero informado em \n horas: ${hora} \n Minutos: ${minuto} \n Segundos: ${r}`)
+
+    }
+    calculo()
+    </script>
+
+</body>
+</html>

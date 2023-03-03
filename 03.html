@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3) Crie uma função que receba como parâmetro a hora 
+de início e a hora de término de um jogo, ambas subdivididas
+em dois valores distintos: horas e minutos. A função deverá 
+retornar a duração expressa em minutos, considerando que o
+tempo máximo de um jogo é de 24 horas e que ele pode começar
+em um dia e terminar no outro. -->
+
+  
+     <script>
+        //PEDI  COM UM PROMPT O VALOR DAS VARIAVEIS PARA A FUNÇÃO
+        let hora1 = parseInt(prompt("Que horas começou? "))
+        let minuto1 = parseInt(prompt("e quantos minutos? "))
+        let hora2 = parseInt(prompt("Que horas terminou? "))
+        let minuto2 = parseInt(prompt("e qauntos minutos? "))
+          
+        //A FUNÇÃO PEGA AS HORAS E MINUTOS JOGA NO PARÂMETRO
+        // E RESOLVE A ESTRUTURA CONDICIONAL
+        function tempo(hora1, minuto1, hora2, minuto2){
+         
+            // RESOLVI OS MINUTOS PRIMEIRO
+         var ini = minuto1 - minuto2 
+
+         
+         // ESTRUTURA CONDICIONAS BEM SIMPLES CASO O JOGO ACABE NPO OUTRO DIA
+         if( hora1 > hora2){
+          inicio = ((hora1 + hora2)*60) + ini
+         
+          // ISSO É O QUE VAI SER FEITO SE A CONDIÇÃO FOR VERDADEIRA
+          console.log(`O jogo durou ${inicio} minutos.`)
+         }else {
+           inicio = (((hora1-hora2)*60) + ini)*-1
+           // ISSO É O QUE VAI SER FEITO SE A CONDIÇÃO FOR VERDADEIRA
+           console.log(`O jogo durou ${inicio} minutos.`)
+         }
+          
+            
+        } 
+        //CHAMANDO A BONITA AQUI 
+        tempo(hora1, minuto1, hora2, minuto2)
+
+     </script> 
+
+</body>
+</html>

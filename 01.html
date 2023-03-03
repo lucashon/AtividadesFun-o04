@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+    <script>
+        //Aqui eu pedi com um prompt o valor das variaveis para
+        // usar na função
+        let nota1 = parseFloat(prompt("Digite a Primeira nota: "))
+        let nota2 = parseFloat(prompt("Digite a Segunda nota: "))
+        let nota3 = parseFloat(prompt("Digite a Terceira nota: "))
+        let TipoMedia = (prompt("Escolha:\n A para calcular a media \n P para calcular a media ponderada :  ")).toUpperCase()
+         
+
+          //A função leu os valores e com uma estrutura condicional 
+          // vez se o tipo é A e o calculo e se o tipo é P e o 
+          //calculo.
+        function calculoMedia(nota1, nota2, nota3, TipoMedia){
+          if(TipoMedia == 'A'){
+           A = (nota1 + nota2 + nota3)/3
+           console.log(`Média Aritimética de: ${A}`)
+          } else if (TipoMedia == 'P'){
+           P = (nota1 * 5 + nota2 * 3 + nota3 * 2)/10
+           // com o console log disse qual era a media dos dois
+           console.log(`Média Ponderada de: ${P}`)
+          }
+        }
+        //chamei a função no final para funcionar
+       calculoMedia(nota1, nota2, nota3, TipoMedia)
+    </script>
+</body>
+</html>
